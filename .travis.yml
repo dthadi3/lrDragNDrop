@@ -1,6 +1,16 @@
 language: node_js
 node_js:
   - "0.10"
+  - "14"
+
+arch:
+  - amd64
+  - ppc64le
+
+jobs:
+  exclude:
+    - node_js: "0.10"
+      arch: ppc64le
 
 services: mongodb
 
